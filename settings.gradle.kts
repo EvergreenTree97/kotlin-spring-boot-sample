@@ -31,3 +31,10 @@ pluginManagement {
         }
     }
 }
+plugins {
+    id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
+}
+include("apps:api-server")
+findProject(":apps:api-server")?.name = "api-server"
+include("modules:clients")
+findProject(":modules:clients")?.name = "clients"
