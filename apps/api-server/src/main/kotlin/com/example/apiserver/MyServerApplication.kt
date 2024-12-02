@@ -1,4 +1,4 @@
-package com.example.sample
+package com.example.apiserver
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

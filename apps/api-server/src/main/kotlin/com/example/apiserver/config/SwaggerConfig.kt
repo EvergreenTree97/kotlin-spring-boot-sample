@@ -1,4 +1,4 @@
-package com.example.sample.config
+package com.example.apiserver.config
 
 import io.swagger.v3.oas.models.Components
 import io.swagger.v3.oas.models.OpenAPI

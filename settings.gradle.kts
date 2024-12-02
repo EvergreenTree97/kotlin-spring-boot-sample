@@ -38,3 +38,7 @@ include("apps:api-server")
 findProject(":apps:api-server")?.name = "api-server"
 include("modules:clients")
 findProject(":modules:clients")?.name = "clients"
+include("modules:domain")
+findProject(":modules:domain")?.name = "domain"
+include("modules:common")
+findProject(":modules:common")?.name = "common"

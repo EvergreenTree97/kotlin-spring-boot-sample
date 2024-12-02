@@ -1,4 +1,4 @@
-package com.example.clients.randomuser
+package com.example.apiserver.clients.randomuser
 
 import org.springframework.cloud.openfeign.FeignClient
 import org.springframework.web.bind.annotation.GetMapping
