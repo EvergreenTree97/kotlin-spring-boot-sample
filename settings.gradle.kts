@@ -2,11 +2,9 @@ rootProject.name = "kotlin-spring-boot-sample"
 
 include(
     "apps:api-server",
-    "apps:worker",
     "modules:clients",
     "modules:domain",
-    "modules:kafka",
-    "modules:redis",
+    "modules:common",
     "modules:support:logging",
     "modules:support:util",
 )
@@ -34,11 +32,3 @@ pluginManagement {
 plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
 }
-include("apps:api-server")
-findProject(":apps:api-server")?.name = "api-server"
-include("modules:clients")
-findProject(":modules:clients")?.name = "clients"
-include("modules:domain")
-findProject(":modules:domain")?.name = "domain"
-include("modules:common")
-findProject(":modules:common")?.name = "common"

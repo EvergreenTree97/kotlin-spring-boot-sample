@@ -1,10 +1,10 @@
 package com.example.apiserver.controller.user
 
-import com.example.apiserver.ApiServerResponse
+import com.example.common.ApiServerResponse
 import com.example.apiserver.controller.user.request.UserCreateRequest
 import com.example.apiserver.controller.user.request.UserUpdateRequest
 import com.example.apiserver.controller.user.response.UserResponse
-import com.example.apiserver.toApiServerResponse
+import com.example.common.toApiServerResponse
 import org.springframework.web.bind.annotation.*
 
 @RestController

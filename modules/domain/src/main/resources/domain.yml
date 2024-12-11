@@ -1,0 +1,61 @@
+#spring:
+#  jpa:
+#    open-in-view: false
+#    #
+#    # https://medium.com/frientrip/spring-boot%EC%9D%98-open-in-view-%EA%B7%B8-%EC%9C%84%ED%97%98%EC%84%B1%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC-83483a03e5dc
+#    properties:
+#      hibernate:
+#        physical_naming_strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+#        default_batch_fetch_size: 100
+#        dialect: org.hibernate.dialect.MySQL8Dialect
+#        show_sql: false
+#        use_sql_comments: true
+#        format_sql: true
+#        ddl_auto: none
+
+---
+spring.config.activate.on-profile: local
+
+spring:
+  jpa:
+    open-in-view: false
+
+    # https://medium.com/frientrip/spring-boot%EC%9D%98-open-in-view-%EA%B7%B8-%EC%9C%84%ED%97%98%EC%84%B1%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC-83483a03e5dc
+    hibernate:
+      ddl_auto: create
+    properties:
+      hibernate:
+        physical_naming_strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+        default_batch_fetch_size: 100
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        show_sql: true
+        use_sql_comments: true
+        format_sql: true
+
+  datasource:
+    # 로컬에 있든, 클라우드에 있든 특정 데이터베이스에 대한 주소, 주소는 어디서 얻는거지?
+    # 정해진 형식이 있다.
+    # url: jdbc:postgresql://${POSTGRES_HOST}:${POSTGRES_PORT}/owing ---> 앞에 스키마는 특정 DB에 대한 고유 스키마, HOST
+    # 보통 아래처럼 환경변수로 로컬에 숨김
+    # POSTGRES_HOST=database.letsowing.com
+    # POSTGRES_PORT=5402
+
+    url: jdbc:postgresql://localhost:5400/whatever
+    username: postgres
+    password: postgres
+
+
+---
+spring.config.activate.on-profile: local-dev
+
+
+---
+spring.config.activate.on-profile: dev
+
+
+---
+spring.config.activate.on-profile: staging
+
+
+---
+spring.config.activate.on-profile: live

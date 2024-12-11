@@ -1,4 +1,4 @@
-package com.example.apiserver.clients.randomuser
+package com.example.clients.randomuser
 
 
 import org.springframework.stereotype.Component

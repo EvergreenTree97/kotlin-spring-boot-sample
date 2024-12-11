@@ -9,6 +9,7 @@ spring:
   config:
     import:
       - clients.yml
+      - domain.yml
 
 ---
 spring.config.activate.on-profile: local

@@ -1,4 +1,4 @@
-package com.example.apiserver
+package com.example.common
 
 data class ApiServerResponse<T>(
     val data: T?,
